@@ -5,10 +5,10 @@ function NavItem({ children, to }) {
   return <StyledNavItem href={to}> {children} </StyledNavItem>;
 }
 const StyledNavItem = styled.a`
-  font-size: 1.6rem;
+  font-size: var(--fs-parapgraph);
   color: var(--text-color);
   font-weight: 600;
-  margin: 20px;
+  margin: 0 20px;
   height: 100%;
   display: inline-block;
 
@@ -30,6 +30,7 @@ const StyledNavItem = styled.a`
   @media only screen and (max-width: 800px) {
     & {
       height: 25px;
+      margin: 10px;
     }
   }
 `;

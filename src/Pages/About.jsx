@@ -7,11 +7,12 @@ function About() {
   return (
     <StyledAbout id="About">
       <Top>
-        <h1>O naszej firmie</h1>
+        <h1>O P.Electric</h1>
         <h2>
           Jakieś motto firmy, którkie zdanie mówiące o was, co robicie albo jaki
           jest wasz cel, podsumowanie działalności czy coś takiego. Jakaś
-          wiadomość do widza czy coś takiego
+          wiadomość do widza czy coś takiego. Jeślu masz inną wizję poddaj ją.
+          Tekst taki dałem żebyś widział jak lezy na stronie.
         </h2>
       </Top>
     </StyledAbout>
@@ -23,7 +24,7 @@ const StyledAbout = styled.section`
 `;
 const Top = styled.div`
   width: 100%;
-  height: 500px;
+  min-height: 90vh;
   position: relative;
   color: var(--text-color);
   align-items: center;
@@ -43,15 +44,16 @@ const Top = styled.div`
   }
   & h1 {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 18%;
-    font-size: 7rem;
+    font-size: var(--fs-heading);
     &::before {
       content: "\t";
     }
   }
 
   & h2 {
+    font-size: var(--fs-subheading);
     width: 500px;
     position: absolute;
     bottom: 18%;
