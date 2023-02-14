@@ -15,8 +15,10 @@ function BottomItem({ children }) {
 }
 const StyledItem = styled.div`
   padding: 3px 10px;
+  letter-spacing: 3px;
   color: var(--text-color);
   display: flex;
+  font-size: var(--fs-small);
   background-color: transparent;
   & span {
     ${flexCenter}
