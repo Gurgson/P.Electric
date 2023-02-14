@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     
     html{
         font-size: 62.5%;
+        scroll-behavior: smooth;
     }
     body{
         ${
@@ -15,10 +16,9 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh; */
         }
         
-
+        background-color: #fafafa;
         font-family: 'Montserrat', sans-serif;
         font-size: 1.6rem;
-                
          }
 `;
 export default GlobalStyle;
