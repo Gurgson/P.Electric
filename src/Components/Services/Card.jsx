@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { flexCenter } from "../../Styles/mixins";
 import CardIcon from "./CardIcon";
 import CardTitle from "./CardTitle";
 
@@ -13,13 +12,17 @@ function Card({ cardProp }) {
   );
 }
 const StyledCard = styled.div`
-  padding: 20px;
-  /* border: 1px solid rgb(0, 0, 0, 0.7); */
   display: flex;
+  z-index: 2;
+  flex: calc(33%);
   align-items: center;
-  margin: 30px 30px;
-  &:nth-child(2n) {
-    margin-left: 15%;
+  flex-direction: column;
+  margin: 20px auto;
+  @media screen and (max-width: 1200px) {
+    flex: calc(50%);
+  }
+  @media screen and (max-width: 800px) {
+    flex: calc(100%);
   }
 `;
 export default Card;

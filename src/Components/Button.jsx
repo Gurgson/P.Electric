@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { boxShadow } from "../Styles/mixins";
 
-function Button({ children, onClick = "" }) {
-  return <StyledButton>{children}</StyledButton>;
+function Button({ isTiny = false, children, onClick }) {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 }
 const StyledButton = styled.button`
   font-size: var(--fs-small);
@@ -10,11 +11,17 @@ const StyledButton = styled.button`
   background-color: var(--secondary-color);
   border-radius: 10px;
   color: var(--text-color);
-  padding: 10px 20px;
+  padding: 1rem 3.2rem;
+  border-radius: 3.3rem;
+  font-weight: 600;
+  font-size: ${(props) =>
+    props.isTiny ? "var(--fs-tiny)" : "var(--fs-description)"};
+
+  margin-left: auto;
+  margin-right: auto;
   &:hover {
-    border-color: var(--tetriary-color);
-    border-width: 3px;
-    transform: translateY(5px);
+    transform: translateY(-5px);
+    ${boxShadow}
     transition: 1s;
   }
 `;

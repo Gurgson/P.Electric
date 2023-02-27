@@ -7,8 +7,10 @@ function CardTitle({ children }) {
 const StyledTitle = styled.p`
   color: var(--primary-color);
   font-size: var(--fs-paragraph);
-  display: flex;
+  font-weight: 700;
   inline-size: 80%;
   height: 100%;
+  margin-top: 40px;
+  text-align: center;
 `;
 export default CardTitle;

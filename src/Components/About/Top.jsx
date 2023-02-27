@@ -17,7 +17,9 @@ function Top() {
             wykonanie dokumentacji istniejących instalacji.
           </p>
         </h2>
-        <Button>Zobacz naszą ofertę</Button>
+        <a href="#Uslugi">
+          <Button onClick={() => {}}>Zobacz naszą ofertę</Button>
+        </a>
       </span>
     </StyledTopDiv>
   );

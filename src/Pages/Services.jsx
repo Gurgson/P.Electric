@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import CardContainer from "../Components/Services/CardContainer";
-import Heading from "../Components/Services/Heading";
+import Heading from "../Components/Heading";
 
 function Services() {
   return (
-    <StyledServicePage id="Services">
-      <Heading />
+    <StyledServicePage id="Uslugi">
+      <Heading HeadingText="Nasze usługi" TextColor="--primary-color" />
       <CardContainer />
     </StyledServicePage>
   );
 }
-const StyledServicePage = styled.div`
+const StyledServicePage = styled.section`
   margin-top: 40px;
 `;
 

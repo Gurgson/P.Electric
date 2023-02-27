@@ -6,9 +6,8 @@ import Top from "../Components/About/Top";
 
 function About() {
   return (
-    <StyledAbout id="About">
+    <StyledAbout id="O-Nas">
       <Top />
-
       <Bottom />
     </StyledAbout>
   );
