@@ -18,6 +18,7 @@ const StyledCard = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 20px auto;
+
   @media screen and (max-width: 1200px) {
     flex: calc(50%);
   }

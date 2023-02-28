@@ -25,32 +25,33 @@ function Card({ data }) {
   );
 }
 const StyledRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: start;
-  width: 65%;
   padding: 20px;
+  position: relative;
+  & > button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   & > :last-child {
     margin-top: 15px;
   }
   @media only screen and (max-width: 700px) {
-    width: 100%;
+    /* width: 100%; */
     justify-content: center;
   }
 `;
 
 const StyledCard = styled.div`
   display: flex;
-
   background-color: var(--secondary-color);
   color: var(--text-color);
-  width: 85%;
-  min-height: 25vh;
-  margin: 75px auto 0 auto;
+  min-height: 40vh;
+  width: 800px;
   border-radius: 3rem;
   transition: 1s;
-  align-items: stretch;
+  position: relative;
+
   &:hover {
     ${boxShadow}
   }
