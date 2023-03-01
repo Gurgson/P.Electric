@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { boxShadow } from "../../Styles/mixins";
-import Button from "../button";
+import Button from "./../General/Button";
 import CardDate from "./CardDate";
 import CardDescription from "./CardDescription";
 import CardImage from "./CardImage";
@@ -37,8 +37,13 @@ const StyledRight = styled.div`
     margin-top: 15px;
   }
   @media only screen and (max-width: 700px) {
-    /* width: 100%; */
     justify-content: center;
+    & > button {
+      position: initial;
+      transform: none;
+      /* margin: 20px auto; */
+      /* display: block; */
+    }
   }
 `;
 
@@ -57,6 +62,7 @@ const StyledCard = styled.div`
   }
   @media only screen and (max-width: 700px) {
     flex-direction: column;
+    width: 90%;
   }
 `;
 export default Card;

@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./../Button";
+import Heading from "../General/Heading";
+import Button from "./../General/Button";
 
 function Form() {
   return (
     <StyledForm>
+      <Heading isTiny={true} TextColor="--primary-color">
+        Napisz bezpośrednio do P.Electric
+      </Heading>
       <label>Twój E-Mail</label>
       <input type="text" placeholder="przykład@poczta.pl"></input>
       <label>Tytuł</label>

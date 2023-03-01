@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Components/Contact/Container";
-import Heading from "./../Components/Heading";
+import { sectionPadding } from "../Styles/mixins";
+import Heading from "./../Components/General/Heading";
 
 function Contact() {
   return (
-    <StyledContact>
-      <Heading
-        HeadingText={"Skontaktuj się z nami"}
-        TextColor="--primary-color"
-      />
+    <StyledContact id="Kontakt">
+      <Heading TextColor="--primary-color">Skontaktuj się z nami</Heading>
       <Container />
     </StyledContact>
   );
 }
-const StyledContact = styled.section``;
+const StyledContact = styled.section`
+  ${sectionPadding};
+`;
 export default Contact;

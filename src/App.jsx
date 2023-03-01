@@ -3,6 +3,7 @@ import { Navigation } from "./Components/NavBar/Navigation";
 import About from "./Pages/About";
 import Completions from "./Pages/Completions";
 import Contact from "./Pages/Contact";
+import Footer from "./Pages/Footer";
 import Services from "./Pages/Services";
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <Completions />
       <Contact />
+      <Footer />
     </React.Fragment>
   );
 }

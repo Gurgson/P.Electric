@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { boxShadow } from "../Styles/mixins";
+import { boxShadow } from "./../../Styles/mixins";
 
 function Button({ isTiny = false, children, onClick }) {
   return <StyledButton onClick={onClick}>{children}</StyledButton>;
