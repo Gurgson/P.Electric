@@ -6,8 +6,9 @@ function CardDate({ date }) {
 }
 const StyledCardDate = styled.p`
   position: absolute;
+  top: 5px;
   right: 5px;
-  bottom: 5px;
   font-size: var(--fs-tiny);
+  opacity: 0.7;
 `;
 export default CardDate;

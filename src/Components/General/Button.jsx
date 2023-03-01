@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   padding: 1rem 3.2rem;
   border-radius: 3.3rem;
   font-weight: 600;
+  margin: 0 auto;
   font-size: ${(props) =>
     props.isTiny ? "var(--fs-tiny)" : "var(--fs-description)"};
 

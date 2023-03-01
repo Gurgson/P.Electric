@@ -17,52 +17,32 @@ function Card({ data }) {
         <CardDate date={data.date} />
         <CardDescription description={data.description} />
         <CardSubconductor subcondactor={data.subcondactor} />
-        <Button isTiny={true} onClick={() => {}}>
-          Zobacz zdjęcia
-        </Button>
       </StyledRight>
+      <Button isTiny={true} onClick={() => {}}>
+        Zobacz zdjęcia
+      </Button>
     </StyledCard>
   );
 }
 const StyledRight = styled.div`
-  padding: 20px;
+  padding: 30px 10px;
   position: relative;
-  & > button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  & > :last-child {
-    margin-top: 15px;
-  }
-  @media only screen and (max-width: 700px) {
-    justify-content: center;
-    & > button {
-      position: initial;
-      transform: none;
-      /* margin: 20px auto; */
-      /* display: block; */
-    }
-  }
+  height: 40vh;
 `;
 
 const StyledCard = styled.div`
   display: flex;
   background-color: var(--secondary-color);
   color: var(--text-color);
-  min-height: 40vh;
-  width: 800px;
-  border-radius: 3rem;
+  width: 300px;
+
   transition: 1s;
   position: relative;
+  flex-direction: column;
+  padding-bottom: 20px;
 
   &:hover {
     ${boxShadow}
-  }
-  @media only screen and (max-width: 700px) {
-    flex-direction: column;
-    width: 90%;
   }
 `;
 export default Card;
