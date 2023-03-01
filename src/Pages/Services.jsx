@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import CardContainer from "../Components/Services/CardContainer";
-import Heading from "../Components/Heading";
+import { sectionPadding } from "../Styles/mixins";
+import Heading from "./../Components/General/Heading";
 
 function Services() {
   return (
     <StyledServicePage id="Uslugi">
-      <Heading HeadingText="Nasze usługi" TextColor="--primary-color" />
+      <Heading TextColor="--primary-color">Nasze usługi</Heading>
       <CardContainer />
     </StyledServicePage>
   );
 }
 const StyledServicePage = styled.section`
-  margin-top: 40px;
+  ${sectionPadding};
 `;
 
 export default Services;

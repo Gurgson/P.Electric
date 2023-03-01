@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../button";
+import Button from "./../General/Button";
 
 function Top() {
   return (
@@ -54,7 +54,7 @@ const StyledTopDiv = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 75px 0;
     align-items: center;
     color: var(--text-color);
     @media only screen and (max-width: 1024px) {

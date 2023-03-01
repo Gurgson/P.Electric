@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Bottom from "../Components/About/Bottom";
 import Top from "../Components/About/Top";
+import { sectionPadding } from "../Styles/mixins";
 
 function About() {
   return (
@@ -12,6 +13,9 @@ function About() {
     </StyledAbout>
   );
 }
-const StyledAbout = styled.section``;
+const StyledAbout = styled.section`
+  ${sectionPadding}
+  padding-top: 0;
+`;
 
 export default About;

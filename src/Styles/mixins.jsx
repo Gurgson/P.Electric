@@ -16,3 +16,7 @@ export const boxShadow = css`
   -moz-box-shadow: 0px 2px 25px -12px rgba(162, 123, 92, 0.84);
   box-shadow: 0px 2px 25px -12px rgba(162, 123, 92, 0.84);
 `;
+
+export const sectionPadding = css`
+  padding: 50px 0 70px 0;
+`;
