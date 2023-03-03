@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 import NavItem from "./NavItem";
 import NavButton from "./NavButton";
-export const Navigation = () => {
+export const Header = () => {
   //handling if navbar should stick to top of a screen
   // const [sticky, setSticky] = useState(false);
   // useEffect(() => {
@@ -21,12 +21,12 @@ export const Navigation = () => {
   };
   return (
     <StyledHeader>
-      <StyledLogo href="/#">P.Electric</StyledLogo>
+      <StyledLogo href="/">P.Electric</StyledLogo>
       <nav ref={navRef}>
-        <NavItem to="#O-Nas">O nas</NavItem>
-        <NavItem to="#Uslugi">Zakres usług</NavItem>
-        <NavItem to="#Realizacje">Realizacje</NavItem>
-        <NavItem to="#Kontakt">Kontakt</NavItem>
+        <NavItem to="/O-Nas">O nas</NavItem>
+        <NavItem to="/Uslugi">Zakres usług</NavItem>
+        <NavItem to="/Realizacje">Realizacje</NavItem>
+        <NavItem to="/Kontakt">Kontakt</NavItem>
 
         <NavButton className="nav-close-btn" onClick={showNavBar}>
           <FaTimes />
@@ -56,7 +56,6 @@ const StyledHeader = styled.header`
   padding: 20px 40px;
   z-index: 100;
   transition: 0.5s;
-  position: sticky;
   top: 0;
   width: 100%;
   @media only screen and (max-width: 500px) {
@@ -64,7 +63,6 @@ const StyledHeader = styled.header`
   }
   @media only screen and (max-width: 800px) {
     & > nav {
-      position: fixed;
       top: 0;
       left: 0;
       height: 100vh;

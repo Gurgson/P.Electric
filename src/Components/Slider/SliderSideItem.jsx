@@ -12,6 +12,8 @@ const StyledSideItem = styled.div`
   perspective: 800px;
   position: relative;
   z-index: 1;
+  opacity: 0.3;
+  cursor: pointer;
   & > div::after {
     content: " ";
     position: absolute;
@@ -20,7 +22,7 @@ const StyledSideItem = styled.div`
     height: 100%;
     top: 0;
     z-index: 5;
-    background-color: rgba(0, 0, 0, 0.4);
+    padding: -30px;
   }
 `;
 export default SliderSideItem;

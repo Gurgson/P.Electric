@@ -21,7 +21,7 @@ const StyledArrow = styled.button`
   padding: 0;
   margin: 0;
   border: 0;
-  flex: 5%;
+  flex: 7.5%;
   display: flex;
   justify-content: center;
   align-items: center;
