@@ -5,7 +5,7 @@ import {
 } from "react-icons/Bs";
 import styled from "styled-components";
 
-function SliderArrow({ direction, onClick, theme = "light" }) {
+function SliderArrow({ direction, onClick, theme = "dark" }) {
   return (
     <StyledArrow theme={theme} onClick={onClick}>
       {direction === "right" ? (
@@ -29,7 +29,7 @@ const StyledArrow = styled.button`
   & > svg {
     font-size: var(--fs-heading);
     color: ${(p) =>
-      p.theme === "light" ? "var(--text-color)" : "var(-primary-color)"};
+      p.theme === "light" ? "var(--text-color)" : "var(--primary-color)"};
   }
 
   & > svg:hover {

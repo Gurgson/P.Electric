@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Completions from "./Pages/Completions";
 import Contact from "./Pages/Contact";
+import Page404 from "./Pages/Page404";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <GlobalStyle />
@@ -15,14 +16,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Header />
       <Routes>
-        {["", "O-Nas"].map((path) => (
-          <Route path={path} element={<About />} />
+        {["", "O-Nas"].map((path, index) => (
+          <Route path={path} element={<About />} key={index} />
         ))}
-        {/* <Route path="/" element={<About />} /> */}
+
         <Route path="Uslugi" element={<Services />} />
         <Route path="Realizacje" element={<Completions />} />
         <Route path="Kontakt" element={<Contact />} />
-        <Route path="*" element={<div>404</div>} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
     </BrowserRouter>

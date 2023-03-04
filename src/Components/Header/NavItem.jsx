@@ -1,15 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function NavItem({ children, to }) {
-  return <StyledNavItem href={to}> {children} </StyledNavItem>;
+function NavItem({ children, destination, handleClick }) {
+  return (
+    <Link to={destination}>
+      <StyledNavItem onClick={() => handleClick()}> {children} </StyledNavItem>
+    </Link>
+  );
 }
-const StyledNavItem = styled.a`
+const StyledNavItem = styled.span`
   font-size: var(--fs-parapgraph);
   color: var(--text-color);
   font-weight: 600;
   margin: 0 20px;
-  height: 100%;
+  /* height: 100%; */
   display: inline-block;
 
   &:after {

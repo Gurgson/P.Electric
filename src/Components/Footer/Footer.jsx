@@ -1,12 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { sectionPadding } from "../../Styles/mixins";
+import {
+  backgroundNetworkSvg,
+  flexCenter,
+  sectionPadding,
+} from "../../Styles/mixins";
 
 function Footer() {
-  return <SyledFooter>header</SyledFooter>;
+  return (
+    <SyledFooter>
+      P.Electric Przemysław Baran &copy; Działamy razem od 2021
+    </SyledFooter>
+  );
 }
 const SyledFooter = styled.footer`
   ${sectionPadding}
+  ${flexCenter}
+  ${backgroundNetworkSvg}
+  color: var(--text-color);
   background-color: var(--primary-color);
 `;
 export default Footer;

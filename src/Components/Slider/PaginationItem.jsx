@@ -19,10 +19,11 @@ const StyledItem = styled.div`
   height: 1.5rem;
   width: 1.5rem;
   margin: 0 5px;
-  background-color: var(--text-color);
+  border: 0 solid var(--tetriary-color);
+  background-color: var(--primary-color);
   &:hover {
     transition: 1s;
-    border: 1px solid var(--tetriary-color);
+    border: 3px solid var(--tetriary-color);
     ${boxShadow}
   }
 `;

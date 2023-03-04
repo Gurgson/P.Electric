@@ -5,23 +5,20 @@ import BottomItem from "./BottomItem";
 function Bottom({}) {
   return (
     <StyledAboutBottom>
-      <BottomItem> Dobra cena</BottomItem>
-      <BottomItem> Komunikacja</BottomItem>
-      <BottomItem> Realizacje</BottomItem>
-      <BottomItem> Jakieś </BottomItem>
-      <BottomItem> Słowa marketingowe słowka </BottomItem>
+      <BottomItem>Instalacje elektryczne</BottomItem>
+      <BottomItem> Wykończenia</BottomItem>
+      <BottomItem> Telekomunikacja przewodowa </BottomItem>
     </StyledAboutBottom>
   );
 }
 const StyledAboutBottom = styled.div`
   background-color: var(--primary-color);
   min-height: 10px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   @media only screen and (max-width: 1024px) {
-    /* flex-direction: column;
-    fle */
     flex-wrap: wrap;
   }
 `;

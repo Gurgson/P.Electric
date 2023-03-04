@@ -15,10 +15,11 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   color: var(--primary-color);
+  margin: 0 10rem;
   & > div,
   form {
-    width: 50%;
-    padding: 2rem 4rem;
+    width: 35%;
+    padding: 3rem 5rem;
   }
   @media screen and (max-width: 900px) {
     flex-direction: column;

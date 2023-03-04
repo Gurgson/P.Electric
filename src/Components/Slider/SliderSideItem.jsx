@@ -12,7 +12,7 @@ const StyledSideItem = styled.div`
   perspective: 800px;
   position: relative;
   z-index: 1;
-  opacity: 0.3;
+  opacity: 0.5;
   cursor: pointer;
   & > div::after {
     content: " ";
