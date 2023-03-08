@@ -17,7 +17,7 @@ function Top() {
             uprawnienia eksploatacyjne, dozorowe oraz pomiarowe.
           </p>
         </h2>
-        <Link to="/Uslugi">
+        <Link to="/Usługi">
           <Button onClick={() => {}}>Zobacz naszą ofertę</Button>
         </Link>
       </span>
@@ -26,14 +26,13 @@ function Top() {
 }
 
 const StyledTopDiv = styled.div`
-  min-height: 80vh;
+  min-height: 95vh;
   background-image: url("about.jpg");
   min-width: 100%;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   z-index: 1;
   &::before {
     z-index: 1;
@@ -51,17 +50,23 @@ const StyledTopDiv = styled.div`
     z-index: 5;
     width: 40%;
     height: 100%;
-    display: flex;
     flex-direction: column;
     padding: 75px 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: var(--text-color);
+    & > a {
+      margin-top: 2rem;
+    }
     @media only screen and (max-width: 1024px) {
       width: 90%;
     }
     @media only screen and (max-width: 850px) {
       background-position: center;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 100%;
     }
     & h1 {
       text-align: center;
@@ -73,9 +78,10 @@ const StyledTopDiv = styled.div`
       text-align: justify;
       font-size: var(--fs-paragraph);
       width: 70%;
-      margin-bottom: 20px;
+
       @media only screen and (max-width: 500px) {
-        width: 90%;
+        width: 80%;
+        margin: 1.5prem auto;
       }
     }
   }

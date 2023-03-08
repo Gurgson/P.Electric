@@ -9,7 +9,9 @@ function CardDescription({ description }) {
 }
 const StyledCardDesc = styled.span`
   font-size: var(--fs-description);
+  min-height: 20rem;
   overflow-y: auto;
-  max-height: 250px;
+  max-height: 2.5rem;
+  width: 95%;
 `;
 export default CardDescription;

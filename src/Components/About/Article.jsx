@@ -1,16 +1,42 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { boxShadow, sectionPadding } from "../../Styles/mixins";
+import { sectionPadding } from "../../Styles/mixins";
 import Heading from "../General/Heading";
 
 function Article({ data }) {
+  console.log(
+    data.isReversed
+      ? {
+          visible: { x: 0 },
+          hidden: { x: -1 },
+        }
+      : {
+          visible: { x: 0 },
+          hidden: { x: 1 },
+        }
+  );
   return (
-    <StlyledArticle>
+    <StlyledArticle
+      as={motion.article}
+      whileInView="visible"
+      viewport={{ once: true }}
+      initial="hidden"
+      transition={{ duration: 1 }}
+      variants={{
+        visible: {
+          scale: 1,
+        },
+        hidden: {
+          scale: 0,
+        },
+      }}
+    >
       <StyledAsideText>
         <Heading TextColor="--primary-color">{data.headingText}</Heading>
         {data.asideText}
       </StyledAsideText>
-      <StyledSVGcontainer src={data.svg} />
+      <StyledSVGcontainer src={data.svg} alt="Element strony tytulowej" />
     </StlyledArticle>
   );
 }

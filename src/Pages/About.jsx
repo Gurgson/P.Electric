@@ -4,7 +4,7 @@ import Article from "../Components/About/Article";
 
 import Bottom from "../Components/About/Bottom";
 import Top from "../Components/About/Top";
-import { sectionPadding } from "../Styles/mixins";
+import Section from "../Components/General/Section";
 
 function About() {
   const articlesData = [
@@ -22,6 +22,7 @@ function About() {
       asideText: "",
     },
   ];
+
   return (
     <StyledAbout id="O-Nas">
       <Top />
@@ -32,8 +33,7 @@ function About() {
     </StyledAbout>
   );
 }
-const StyledAbout = styled.section`
-  ${sectionPadding}
+const StyledAbout = styled(Section)`
   padding-top: 0;
 `;
 

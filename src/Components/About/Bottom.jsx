@@ -6,8 +6,10 @@ function Bottom({}) {
   return (
     <StyledAboutBottom>
       <BottomItem>Instalacje elektryczne</BottomItem>
-      <BottomItem> Wykończenia</BottomItem>
-      <BottomItem> Telekomunikacja przewodowa </BottomItem>
+      <BottomItem>Instalacje teletechniczne</BottomItem>
+      <BottomItem>Doradztwo</BottomItem>
+
+      <BottomItem> Inżyniering </BottomItem>
     </StyledAboutBottom>
   );
 }

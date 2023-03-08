@@ -1,11 +1,18 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import CardIcon from "./CardIcon";
 import CardTitle from "./CardTitle";
-
 function Card({ cardProp }) {
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
-    <StyledCard>
+    <StyledCard as={motion.div} variants={item}>
       <CardIcon> {cardProp.icon}</CardIcon>
       <CardTitle>{cardProp.title}</CardTitle>
     </StyledCard>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import NavItem from "./NavItem";
@@ -10,7 +10,7 @@ export const Header = () => {
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
-  const navItems = ["O-Nas", "/Uslugi", "/Realizacje", "/Kontakt"].map(
+  const navItems = ["O-Nas", "/Usługi", "/Realizacje", "/Kontakt"].map(
     (data, index) => (
       <NavItem destination={data} handleClick={showNavBar} key={index}>
         {data.replace("/", "").replace("-", " ")}

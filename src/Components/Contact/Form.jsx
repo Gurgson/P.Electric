@@ -5,16 +5,16 @@ import Button from "./../General/Button";
 
 function Form() {
   return (
-    <StyledForm>
+    <StyledForm action="mailto:https:pelectric.pl">
       <Heading isTiny={true} TextColor="--primary-color">
         Napisz bezpośrednio do P.Electric
       </Heading>
       <label>Twój E-Mail</label>
-      <input type="text" placeholder="przykład@poczta.pl"></input>
+      <input type="text" name="mail" placeholder="adres@poczta.pl"></input>
       <label>Tytuł</label>
-      <input></input>
+      <input placeholder="Temat" type="text" name="subject"></input>
       <label>Treść</label>
-      <textarea></textarea>
+      <textarea name="body" placeholder="Witam, Piszę w sprawie..."></textarea>
       <Button>Wyślij mail</Button>
     </StyledForm>
   );

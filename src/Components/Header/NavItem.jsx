@@ -1,22 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 function NavItem({ children, destination, handleClick }) {
   return (
-    <Link to={destination}>
-      <StyledNavItem onClick={() => handleClick()}> {children} </StyledNavItem>
-    </Link>
+    <StyledNavItem to={destination} onClick={() => handleClick()}>
+      {children}
+    </StyledNavItem>
   );
 }
-const StyledNavItem = styled.span`
+const StyledNavItem = styled(NavLink)`
   font-size: var(--fs-parapgraph);
   color: var(--text-color);
   font-weight: 600;
   margin: 0 20px;
-  /* height: 100%; */
   display: inline-block;
-
   &:after {
     display: block;
     content: "";
@@ -24,13 +22,14 @@ const StyledNavItem = styled.span`
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
-  &:hover:after {
-    transform: scaleX(1);
-  }
-  &:hover {
-    transform: translateY(-3px);
 
+  &:hover,
+  &.active {
+    transform: translateY(-3px);
     transition-duration: 0.25s;
+    &::after {
+      transform: scaleX(1);
+    }
   }
   @media only screen and (max-width: 800px) {
     & {
@@ -39,4 +38,5 @@ const StyledNavItem = styled.span`
     }
   }
 `;
+
 export default NavItem;

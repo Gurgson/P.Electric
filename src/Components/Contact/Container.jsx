@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   color: var(--primary-color);
-  margin: 0 10rem;
+
   & > div,
   form {
     width: 35%;
@@ -28,7 +28,7 @@ const StyledContainer = styled.div`
   & > div,
   form {
     width: 100%;
-    padding: 2rem;
+    padding: 3rem;
   }
 `;
 export default Container;
