@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import { boxShadow } from "../../Styles/mixins";
@@ -8,40 +9,39 @@ import CardImage from "./CardImage";
 import CardName from "./CardName";
 import CardSubconductor from "./CardSubconductor";
 
-function Card({ data }) {
+function Card({ data, handleClick }) {
   return (
     <StyledCard>
-      <CardImage src={data.cover} />
-      <StyledRight>
-        <CardName name={data.name} />
-        <CardDate date={data.date} />
-        <CardDescription description={data.description} />
-        <CardSubconductor subcondactor={data.subcondactor} />
-      </StyledRight>
-      <Button isTiny={true} onClick={() => {}}>
+      <CardImage src={data.folder + "/Cover.jpg"} />
+      <CardName name={data.name} />
+      <CardDate date={data.date} />
+      <CardDescription description={data.description} />
+      <CardSubconductor subcondactor={data.subcondactor} />
+
+      <Button isTiny={true} onClick={() => handleClick()}>
         Zobacz zdjęcia
       </Button>
     </StyledCard>
   );
 }
-const StyledRight = styled.div`
-  padding: 30px 10px;
-  position: relative;
-  height: 40vh;
-`;
 
 const StyledCard = styled.div`
   display: flex;
-  background-color: var(--secondary-color);
+  border-radius: 2rem 0;
+  background-color: var(--primary-color);
   color: var(--text-color);
-  width: 300px;
-
+  width: 35rem;
+  padding: 30px 10px;
+  justify-content: center;
+  align-items: center;
   transition: 1s;
   position: relative;
   flex-direction: column;
   padding-bottom: 20px;
-
+  gap: 1rem;
   &:hover {
+    transition: 1;
+
     ${boxShadow}
   }
 `;

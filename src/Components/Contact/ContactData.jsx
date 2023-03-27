@@ -46,13 +46,13 @@ function ContactData() {
       <ContactDataParagraph data={data[2]} />
       <ContactDataParagraph data={data[3]} />
       <br />
-      <a href={data[4].desc}>
+      <a href={`tel:${data[4].desc}`}>
         <ContactDataParagraph data={data[4]} />
       </a>
-      <a href={data[5].desc}>
+      <a href={`tel:${data[5].desc}`}>
         <ContactDataParagraph data={data[5]} />
       </a>
-      <a href={data[6].desc}>
+      <a href={`tel:${data[6].desc}`}>
         <ContactDataParagraph data={data[6]} />
       </a>
     </StyledContactData>

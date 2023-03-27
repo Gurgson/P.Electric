@@ -9,17 +9,15 @@ const StyledButton = styled.button`
   font-size: var(--fs-small);
   cursor: pointer;
   background-color: var(--secondary-color);
-  border-radius: 10px;
   color: var(--text-color);
   padding: 1rem 3.2rem;
-  border-radius: 3.3rem;
+  border: none;
+  border-radius: 1rem;
   font-weight: 600;
   margin: 0 auto;
+  opacity: 0.9;
   font-size: ${(props) =>
     props.isTiny ? "var(--fs-tiny)" : "var(--fs-description)"};
-
-  margin-left: auto;
-  margin-right: auto;
   &:hover {
     transform: translateY(-5px);
     ${boxShadow}
